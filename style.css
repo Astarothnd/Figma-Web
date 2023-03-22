@@ -16,6 +16,8 @@ html{
 
 body{
     background-color: #151515;
+    position: relative;
+    top: 0;
     font-size: 1.2rem;
 }
 
@@ -264,8 +266,7 @@ body{
 /* ------------------------------------------/MAIN/------------------------------------------ */
 
 .main{
-    position: relative;
-    top: 0px;
+    margin-top: 60px;
 }
 
 /* ---------------------/SECTION/--------------------- */
@@ -843,16 +844,17 @@ body{
 /* ------------------------------------------/WEB/------------------------------------------ */
 
 .film{
-
     background-color: #333;
-    padding: 16px;
+    padding: 0 16px ;
 }
-
+.film-panel.film-panel__no-margin{
+    margin: 0;
+}
 .film-panel{
     box-sizing: border-box;
     background-color: #444;
     padding: 0 16px;
-    margin: 16px 0;
+    margin: 16px 0 0;
     border-radius: 8px;
     border: 0;
     position: relative;
@@ -870,6 +872,7 @@ body{
     position: absolute;
     display: flex;
     justify-content: space-between;
+    font-size: 1.5rem;
 
     background-color: rgba(0, 0, 0, 0.5);
     height: 250px;
@@ -899,14 +902,13 @@ body{
     color: #fff;
 }
 .film-info__header{
-    font-size: 3.2rem;
+    font-size: 2.5rem;
     text-align: center;
     margin: 4px 0 16px;
 }
 .film-info__line{
     display: flex;
     height: 30px;
-    font-size: 2rem;
     color: #ddd;
     align-items: center;
 }
@@ -918,12 +920,11 @@ body{
     align-items: center;
 }
 .film-info__item{
-    margin: 0 12px;
+    margin: 0 8px;
     background-color: #000;
     border: 1px solid black;
     padding: 8px 16px;
     color: #ddd;
-    font-size: 1.5rem;
     text-decoration: none;
     border-radius: 16px;
 }
@@ -933,7 +934,7 @@ body{
     color: black;
 }
 .film-info__label{
-    font-size: 2rem;
+    
     color: #ddd;
 }
 .film-info__text{
@@ -950,10 +951,11 @@ body{
     padding: 8px 0;
 }
 .film-function__left{
-
+    display: flex;
 }
 .film-function__button{
-    padding: 8px 12px;
+    text-decoration: none;
+    padding: 8px 16px;
     background-color: #42ad48;
     color: white;
     border-radius: 8px;
@@ -970,11 +972,522 @@ body{
     background-color: #206323;
     cursor: pointer;
 }
-.film-function__button{
-
+.film-function__button.film-star{
+    background-color: #E9A800;
+    color: #000;
 }
-.film-star{
 
+.film-function__button.film-star:hover{
+    background-color: #444;
+    color: #ddd;
+}
+
+/* ----------------------/Film Description/---------------------*/
+
+.film-line{
+    display: flex;
+    box-sizing: content-box;
+    margin-top: 16px;
+}
+
+.film-line__panel{
+    box-sizing: border-box;
+    background-color: #444;
+    padding: 0 16px;
+    height: 100%;
+    border-radius: 8px;
+    border: 0;
+    position: relative;
+}
+.film-line__header{
+    font-size: 2rem;
+    color: #fff;
+    padding: 16px 0;
+}
+
+.film-line__header::after{
+    content: "";
+    margin-left: -16px;
+    margin-top: 8px;
+    display: block;
+    width: calc(100% + 32px);
+    height: 4px;
+    top: 100%;
+    background-color: #333;
+}
+
+.film-desc{
+    color: #ddd;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    word-spacing: 0.2rem;
+    padding: 0 0 16px;
+}
+
+/* ----------------------/Film Season/---------------------*/
+
+.film-season{
+    display: flex;
+    justify-content: start;
+}
+.film-season__item{
+    cursor: pointer;
+    margin: 16px 16px 16px 0;
+    font-size: 1.6rem;
+}
+
+/* ----------------------/Film Episode/---------------------*/
+
+.film-line__left{
+    padding: 0 16px 0 0;
+}
+.film-line__right{
+    padding: 0 0 0 0px;
+}
+
+.film-episode{
+    display: flex;
+    padding: 0 0 16px;
+    flex-direction: column;
+}
+
+.film-episode__line{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.film-episode__line + .film-episode__line{
+    margin-top: 16px;
+}
+
+.film-season__item,.film-episode__item{
+    color: #ddd;
+    background-color: #333;
+    border-radius: 8px;
+    font-weight: 700;
+    text-align: center;
+    padding: 12px 8px;
+    
+}
+
+.film-episode__item{
+    font-size: 2rem;
+    text-decoration: none;
+    width: 20%;
+    display: inline-block;
+}
+
+.film-season__item:hover,
+.film-episode__item:hover{
+    background-color: #ddd;
+    color: #333;
+}
+
+
+/* ----------------------/Film Comment/---------------------*/
+
+.film-comment{
+    padding: 16px 0;
+}
+
+.film-commnet__info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.film-comment__header{
+    font-size: 2rem;
+    color: white;
+    margin-right: 0;
+}
+
+.film-comment__login{
+    background-color: rgb(189, 35, 35);
+    border: 0;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 1.6rem;
+    color: #eee;
+}
+
+.film-comment__login:hover{
+    background-color: rgb(128, 23, 23);
+    cursor: pointer;
+}
+
+.film-comment__content{
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+}
+.film-comment__item{
+    height: 100px;
+    padding: 10px;
+    background-color: #666;
+    display: flex;
+    align-items: start;
+    border: 0;
+    border-radius: 8px;
+}
+.film-comment__item + .film-comment__item{
+    margin-top: 16px;
+}
+
+.film-comment__item-left{
+    width: 80px;
+    height: 80px;
+    background-image: url(./Images/dota.jpg);
+    background-size: 100% 100%;
+}
+.film-comment__item-avatar{
+    border: 0;
+    border-radius: 8px;
+}
+.film-comment__item-right{
+    margin-left: 16px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.film-comment__item-header{
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 12px 0;
+}
+.film-comment__item-text{
+    color: #bbb;
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+.film-comment__button{
+    margin: 16px auto 0;
+    width: 100%;
+    padding: 8px 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ccc;
+    background-color: #3a79af;
+    border: 0;
+    border-radius: 8px;
+}
+
+.film-comment__button:hover{
+    background-color: #26547c;
+    cursor: pointer;
+}
+
+/* ------------------------------------------/FILM CONTENT/------------------------------------------ */
+
+.film-content{
+    padding-top: 16px;
+}
+.film-content__info,
+.film-content__line{
+    background-color: #444;
+    padding: 16px;
+    border-radius: 8px;
+    border: 0;
+    margin-top: 16px;
+}
+
+.film-content__info{
+    margin-top: 0;
+}
+
+
+/* ----------------------/Film Screen Top/---------------------*/
+
+.film-content__line-warn{
+    background-color: #d4a30f;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.film-content__info{
+    background-color: #111;
+}
+
+.film-content__info-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 8px;
+}
+
+.film-content__button{
+    display: inline-flex;
+    border-radius: 5px;
+    margin: 0 4px;
+    padding: 8px 12px;
+    border: 0;
+    border-bottom: 3px solid #444;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 900;
+    font-size: 1.6rem;
+}
+
+.film-content__button:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.film-content__button-warn{
+    background-color: rgb(189, 35, 35);
+}
+.film-content__button-info{
+    background-color: #E9A800;
+}
+.film-content__link{
+    color: #E9A800;
+    text-decoration: none;
+    display: block;
+    font-size: 2rem;
+    padding: 12px 0;
+    border-bottom: 2px dashed #444;
+}
+
+.film-content__text{
+    color: #ccc;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    font-size: 1.6rem;
+}
+
+
+/* ----------------------/Film Screen Panel/---------------------*/
+
+.film-content__watch{
+    padding-top: 16px;
+}
+
+.film-content__screen{
+    background-color: #111;
+    height: 600px;
+    margin: auto;
+}
+.film-content__list{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.film-content__server{
+    background-color: #6b6a6a;
+    color: #ccc;
+    font-weight: 500;
+    display: inline-flex;
+    border-radius: 5px;
+    border: 0;
+    margin: 0 4px;
+    padding: 10px;
+    border-bottom: 4px solid #292929;
+    cursor: pointer;
+}
+.film-content__server.film-content__server-activated{
+    background-color: #369e69;
+}
+
+.film-content__server:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+/* ----------------------/Film Screen Episode/---------------------*/
+
+.film-content__header{
+    color: #ddd;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    padding: 8px 0;
+    font-size: 2rem;
+    border-bottom: 2px dashed #222;
+}
+
+.film-content__episode{
+    background: #333232;
+    display: flex;
+    color: #ddd;
+    font-weight: 700;
+    font-size: 1.8rem;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 8px;
+    margin: 0 4px;
+    border: 1px solid #4e4e4e;
+    width: 6%;
+    box-sizing: border-box;
+}
+.film-content__episode-watched{
+    background-color: #111;
+}
+.film-content__episode-watching{
+    background-color: #ce6464;
+}
+
+.film-content__episode:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+
+/* ------------------------------------------/LOG IN/------------------------------------------ */
+
+.mainframe{
+    padding-bottom: 16px;
+    background-color: #333;
+}
+
+.mainframe__box{
+    background-color: #444;
+    margin: 16px;
+}
+
+/* ----------------------/Top/---------------------*/
+
+.mainframe__top{
+    background-color: #25867d;
+    color: #ccc;
+    padding: 20px 12px;
+    font-size: 1.8rem;
+    box-shadow: 1px 1px 1px 1px #000;
+}
+
+.mainframe__link{
+    font-size: 1.8rem;
+    color: #d4a30f;
+    text-decoration: none;
+}
+
+/* ----------------------/CONTENT/---------------------*/
+
+.mainframe-content{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 0;
+    border-radius: 4px;
+    color: #eee;
+}
+.mainframe-content__header{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin: 16px 0;
+    font-size: 3rem;
+}
+.mainframe-content__line{
+    margin-top: 16px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+    justify-content: space-between;
+    align-items: start;
+}
+.mainframe-content__box{
+    margin-top: 8px;
+    outline: none;
+    padding: 12px;
+    width: 100%;
+    background-color: #111;
+    border: 0;
+}
+
+.mainframe-content__extra{
+    display: flex;
+    margin: 16px 0;
+    width: 100%;
+    justify-content: end;
+    font-size: 1.6rem;
+    color: #ddd;
+}
+
+.mainframe-content__extra-center{
+    justify-content: center;
+}
+
+.mainframe-content__link{
+    margin-left: 8px;
+    font-size: 1.6rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* ----------------------/BUTTON/---------------------*/
+
+.mainframe-content__button{
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-top: 16px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #4a4a4a;
+    background: #fdd835;
+    border: 0;
+    border-bottom: 4px solid rgba(0,0,0,0.2);
+}
+
+.mainframe-content__button-register{
+    background-color: #37869e;
+    color: #ddd;
+}
+
+.mainframe-content__box-button:hover,
+.mainframe-content__button:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.mainframe-content__bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+    border-top: 2px #333 dashed;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.mainframe-content__box-button{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: 8px;
+    width: calc(50% - 4px);
+}
+
+.mainframe-content__icon{
+    padding: 12px 12px;
+    height: 100%;
+    border-right: rgba(0,0,0,.2) 2px solid;
+}
+.mainframe-content__text{
+    flex: 1;
+    padding: 12px 4px;
+}
+.mainframe-content__button-facebook{
+    color: #fff;
+    background-color: #3b5998;
+    border-color: rgba(0,0,0,.2);
+}
+.mainframe-content__button-google{
+    color: #fff;
+    border-color: rgba(0,0,0,.2);
+    background-color: #dd4b39;
 }
 
 /* ------------------------------------------/GRID/------------------------------------------ */
