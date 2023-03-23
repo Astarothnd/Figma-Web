@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;0,900;1,300;1,500&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="./font/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -20,12 +20,12 @@
     <header class="header grid_full">
         <nav class="header-container grid">
             <div class="header-list">
-                <a href = "#" class="">
+                <a href = "./index.html" class="">
                     <img src="./Images/logo.png" alt="" class = "header-img">
                 </a>
-                <a href = "#" class="header-link header-link__activated">Đề xuất</a>
-                <a href = "#" class="header-link">Phim bộ</a>
-                <a href = "#" class="header-link">Phim lẻ</a>
+                <a href = "#Recommendation" class="header-link header-link__activated">Đề xuất</a>
+                <a href = "#PHIM_BO" class="header-link">Phim bộ</a>
+                <a href = "#PHIM_LE" class="header-link">Phim lẻ</a>
             </div>
 
             <div class="header-list">
@@ -39,19 +39,52 @@
                 </div>
 
                 <button class="header-login">
-                    <i class="ti-user"></i>
+                    <a href="./login.html" class="header-login__link"><i class="ti-user"></i></a>
+                    <div class="header-notify">
+                        <p class="header-notify__text">Đăng nhập để theo dõi nội dung mới nhất</p>
+                        <a href="./login.html" class="header-notify__link">Đăng nhập</a>
+                    </div>
                 </button>
 
                 <button class="header-vip">
-                    <i class="ti-crown"></i>
-                    V.I.P
+                    <a href="./register.html" class="header-vip__link">
+                        <i class="ti-crown"></i>
+                        V.I.P
+                    </a>
+
+                    <div class="header-vip__notify">
+                        <a href="#" class="header_vip__notify-link">
+                            Quyền lợi thành viên
+                            <i class="ti-angle-right"></i>
+                        </a>
+                        <div class="header-vip__list">
+                            <a href="#" class="header-vip__item">
+                                <img src="./Images/privilege-1.png" alt="">
+                                <span>Hỗ trợ đa nền tảng</span>
+                            </a>
+                            <a href="#" class="header-vip__item">
+                                <img src="./Images/privilege-2.png" alt="">
+                                <span>Blu-ray 1080P</span>
+                            </a>
+                            <a href="#" class="header-vip__item">
+                                <img src="./Images/privilege-3.png" alt="">
+                                <span>Nội Dung Độc Quyền</span>
+                            </a>
+                            <a href="#" class="header-vip__item">
+                                <img src="./Images/privilege-4.png" alt="">
+                                <span>Không Quảng Cáo</span>
+                            </a>
+                        </div>
+                        <a href="./register.html" class="header-vip__button">Kích hoạt VIP chỉ 633đ/ngày</a>
+                        <a href="#" class="header-vip__trade">Mã đổi quà</a>
+                    </div>
                 </button>
             </div>
         </nav>
       
     </header>
 
-    <div class="ImageNav grid_full">
+    <div class="ImageNav grid_full" id = "Recommendation">
             <!-- <img src="./Images/6361776.webp" alt="" class="ImageNav-back"> -->
             <img src="./Images/6361776.webp" alt="" class="ImageNav-img">
             <div class="ImageNav-content grid">
@@ -75,10 +108,10 @@
                 <p class="ImageNav-desc">
                     Câu chuyện kể về cuộc hành trình của Eren Jaeger và hai người bạn thân từ thuở nhỏ là Mikasa Ackerman và Armin Arlert. Cuộc đời của họ hoàn toàn bị thay đổi sau khi bức tường ngoài cùng Maria bị sụp đổ và các Titan đổ bộ vào ngôi làng tàn sát người thân của mình.
                 </p>
-                <button class="ImageNav-button">
+                <a href = "./film.html" class="ImageNav-button">
                     <i class="ti-arrow-circle-right"></i>
                     Xem phim
-                </button>
+                </a>
             </div>
     </div>
 
@@ -86,29 +119,323 @@
         <div class="section">
             <h3 class="section-header">Đề xuất Hot</h3>
             <div class="section-content">
-                <div class="section-left"></div>
-                <div class="section-right"></div>
+                <button class="section-left" id ="btn-left1">
+                    <i class="ti-angle-double-left section-icon"></i>
+                </button>
+                <button class="section-right" id = "btn-right1">
+                    <i class="ti-angle-double-right section-icon"></i>
+                </button>
 
-                <div class="hot-item">
-                    <div class="hot-item__episode">8/8</div>
-                    <div class="hot-item__name">Dota: The Dragon’s Blood</div>
+                <div class="section-box" id="box">
+                    <div class="section-box__content" id = "content1">
+                        <div class="hot-item">
+                            <a href = "./web.html"  class="hot-item__content">
+                                <div class="mostview-item__layer"></div>
+                                <img src="./Images/dota.jpg" alt="" class="hot-item__img">
+                                <div class="hot-item__icon"></div>
+                                <div class="hot-item__episode">8/8</div>
+                                <div class="hot-item__name">Dota: The Dragon’s Blood</div>
+                            </a>
+                        </div>
+                        <div class="hot-item">
+                            <a href = "./web.html"  class="hot-item__content">
+                                <div class="mostview-item__layer"></div>
+                                <img src="./Images/dota.jpg" alt="" class="hot-item__img">
+                                <div class="hot-item__icon"></div>
+                                <div class="hot-item__episode">8/8</div>
+                                <div class="hot-item__name">Dota: The Dragon’s Blood</div>
+                            </a>
+                        </div>
+                        <div class="hot-item">
+                            <a href = "./web.html"  class="hot-item__content">
+                                <div class="mostview-item__layer"></div>
+                                <img src="./Images/dota.jpg" alt="" class="hot-item__img">
+                                <div class="hot-item__icon"></div>
+                                <div class="hot-item__episode">8/8</div>
+                                <div class="hot-item__name">Dota: The Dragon’s Blood</div>
+                            </a>
+                        </div>
+                        <div class="hot-item">
+                            <a href = "./web.html"  class="hot-item__content">
+                                <div class="mostview-item__layer"></div>
+                                <img src="./Images/dota.jpg" alt="" class="hot-item__img">
+                                <div class="hot-item__icon"></div>
+                                <div class="hot-item__episode">8/8</div>
+                                <div class="hot-item__name">Dota: The Dragon’s Blood</div>
+                            </a>
+                        </div>
+                        <div class="hot-item">
+                            <a href = "./web.html"  class="hot-item__content">
+                                <div class="mostview-item__layer"></div>
+                                <img src="./Images/dota.jpg" alt="" class="hot-item__img">
+                                <div class="hot-item__icon"></div>
+                                <div class="hot-item__episode">8/8</div>
+                                <div class="hot-item__name">Dota: The Dragon’s Blood</div>
+                            </a>
+                        </div>
+                        <div class="hot-item">
+                            <a href = "./web.html"  class="hot-item__content">
+                                <div class="mostview-item__layer"></div>
+                                <img src="./Images/dota.jpg" alt="" class="hot-item__img">
+                                <div class="hot-item__icon"></div>
+                                <div class="hot-item__episode">8/8</div>
+                                <div class="hot-item__name">Dota: The Dragon’s Blood</div>
+                            </a>
+                        </div>
+                        <div class="hot-item">
+                            <a href = "./web.html"  class="hot-item__content">
+                                <div class="mostview-item__layer"></div>
+                                <img src="./Images/dota.jpg" alt="" class="hot-item__img">
+                                <div class="hot-item__icon"></div>
+                                <div class="hot-item__episode">8/8</div>
+                                <div class="hot-item__name">Dota: The Dragon’s Blood</div>
+                            </a>
+                        </div>
+                        <div class="hot-item">
+                            <a href = "./web.html"  class="hot-item__content">
+                                <div class="mostview-item__layer"></div>
+                                <img src="./Images/dota.jpg" alt="" class="hot-item__img">
+                                <div class="hot-item__icon"></div>
+                                <div class="hot-item__episode">8/8</div>
+                                <div class="hot-item__name">Dota: The Dragon’s Blood</div>
+                            </a>
+                        </div>
+                        <div class="hot-item">
+                            <a href = "./web.html"  class="hot-item__content">
+                                <div class="mostview-item__layer"></div>
+                                <img src="./Images/dota.jpg" alt="" class="hot-item__img">
+                                <div class="hot-item__icon"></div>
+                                <div class="hot-item__episode">8/8</div>
+                                <div class="hot-item__name">Dota: The Dragon’s Blood</div>
+                            </a>
+                        </div>
+                        <div class="hot-item">
+                            <a href = "./web.html"  class="hot-item__content">
+                                <div class="mostview-item__layer"></div>
+                                <img src="./Images/dota.jpg" alt="" class="hot-item__img">
+                                <div class="hot-item__icon"></div>
+                                <div class="hot-item__episode">8/8</div>
+                                <div class="hot-item__name">Dota: The Dragon’s Blood</div>
+                            </a>
+                        </div>
+                        <div class="hot-item">
+                            <a href = "./web.html"  class="hot-item__content">
+                                <div class="mostview-item__layer"></div>
+                                <img src="./Images/dota.jpg" alt="" class="hot-item__img">
+                                <div class="hot-item__icon"></div>
+                                <div class="hot-item__episode">8/8</div>
+                                <div class="hot-item__name">Dota: The Dragon’s Blood</div>
+                            </a>
+                        </div>
+                        <div class="hot-item">
+                            <a href = "./web.html"  class="hot-item__content">
+                                <div class="mostview-item__layer"></div>
+                                <img src="./Images/dota.jpg" alt="" class="hot-item__img">
+                                <div class="hot-item__icon"></div>
+                                <div class="hot-item__episode">8/8</div>
+                                <div class="hot-item__name">Dota: The Dragon’s Blood</div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="section">
             <h3 class="section-header">Nhiều lượt xem nhất</h3>
             <div class="section-content">
-                <div class="section-button-left"></div>
-                <div class="section-button-right"></div>
-
-                <div class="mostview-item">
-                    <img src="./Images/c3gTrEo.jpg" alt="" class="mostview-item__img">
-                    <div class="mostview-item__panel">
-                        <h4 class="mostview-item__rank">1</h4>
-                        <div class="mostview-item__info">
-                            <p class="mostview-item__name">Fullmetal Alchemist: BD</p>
-                            <p class="mostview-item__episode">51 tập</p>
-                        </div>
+                <div class="section-button-left" id ="btn-left3">
+                    <i class="ti-angle-left section-button-icon"></i>
+                </div>
+                <div class="section-button-right" id ="btn-right3">
+                    <i class="ti-angle-right section-button-icon"></i>
+                </div>
+                
+                <div class="section-box" id="box2">
+                    <div class="section-box__content2" id = "content3">
+                        <a href = "./web.html" class="mostview-item">
+                            <div>
+                                <div class="mostview-item__overlay">
+                                    <div class="mostview-item__Box">
+                                        <button class="mostview-item__button mostview-item__button-green">
+                                            <i class="ti-angle-right"></i>
+                                        </button>
+                                        <button class="mostview-item__button">
+                                            <i class="ti-save"></i>
+                                        </button>
+                                    </div>
+                                    <div class="mostview-item__layer"></div>
+                                    <img src="./Images/c3gTrEo.jpg" alt="" class="mostview-item__img">
+                                </div>
+                                <div class="mostview-item__panel">
+                                    <h4 class="mostview-item__rank">1</h4>
+                                    <div class="mostview-item__info">
+                                        <p class="mostview-item__name">Fullmetal Alchemist: BD</p>
+                                        <p class="mostview-item__episode">51 tập</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href = "./web.html" class="mostview-item">
+                            <div>
+                                <div class="mostview-item__overlay">
+                                    <div class="mostview-item__Box">
+                                        <button class="mostview-item__button mostview-item__button-green">
+                                            <i class="ti-angle-right"></i>
+                                        </button>
+                                        <button class="mostview-item__button">
+                                            <i class="ti-save"></i>
+                                        </button>
+                                    </div>
+                                    <div class="mostview-item__layer"></div>
+                                    <img src="./Images/c3gTrEo.jpg" alt="" class="mostview-item__img">
+                                </div>
+                                <div class="mostview-item__panel">
+                                    <h4 class="mostview-item__rank">2</h4>
+                                    <div class="mostview-item__info">
+                                        <p class="mostview-item__name">Fullmetal Alchemist: BD</p>
+                                        <p class="mostview-item__episode">51 tập</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href = "./web.html" class="mostview-item">
+                            <div>
+                                <div class="mostview-item__overlay">
+                                    <div class="mostview-item__Box">
+                                        <button class="mostview-item__button mostview-item__button-green">
+                                            <i class="ti-angle-right"></i>
+                                        </button>
+                                        <button class="mostview-item__button">
+                                            <i class="ti-save"></i>
+                                        </button>
+                                    </div>
+                                    <div class="mostview-item__layer"></div>
+                                    <img src="./Images/c3gTrEo.jpg" alt="" class="mostview-item__img">
+                                </div>
+                                <div class="mostview-item__panel">
+                                    <h4 class="mostview-item__rank">3</h4>
+                                    <div class="mostview-item__info">
+                                        <p class="mostview-item__name">Fullmetal Alchemist: BD</p>
+                                        <p class="mostview-item__episode">51 tập</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href = "./web.html" class="mostview-item">
+                            <div>
+                                <div class="mostview-item__overlay">
+                                    <div class="mostview-item__Box">
+                                        <button class="mostview-item__button mostview-item__button-green">
+                                            <i class="ti-angle-right"></i>
+                                        </button>
+                                        <button class="mostview-item__button">
+                                            <i class="ti-save"></i>
+                                        </button>
+                                    </div>
+                                    <div class="mostview-item__layer"></div>
+                                    <img src="./Images/c3gTrEo.jpg" alt="" class="mostview-item__img">
+                                </div>
+                                <div class="mostview-item__panel">
+                                    <h4 class="mostview-item__rank">4</h4>
+                                    <div class="mostview-item__info">
+                                        <p class="mostview-item__name">Fullmetal Alchemist: BD</p>
+                                        <p class="mostview-item__episode">51 tập</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href = "./web.html" class="mostview-item">
+                            <div>
+                                <div class="mostview-item__overlay">
+                                    <div class="mostview-item__Box">
+                                        <button class="mostview-item__button mostview-item__button-green">
+                                            <i class="ti-angle-right"></i>
+                                        </button>
+                                        <button class="mostview-item__button">
+                                            <i class="ti-save"></i>
+                                        </button>
+                                    </div>
+                                    <div class="mostview-item__layer"></div>
+                                    <img src="./Images/c3gTrEo.jpg" alt="" class="mostview-item__img">
+                                </div>
+                                <div class="mostview-item__panel">
+                                    <h4 class="mostview-item__rank">5</h4>
+                                    <div class="mostview-item__info">
+                                        <p class="mostview-item__name">Fullmetal Alchemist: BD</p>
+                                        <p class="mostview-item__episode">51 tập</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href = "./web.html" class="mostview-item">
+                            <div>
+                                <div class="mostview-item__overlay">
+                                    <div class="mostview-item__Box">
+                                        <button class="mostview-item__button mostview-item__button-green">
+                                            <i class="ti-angle-right"></i>
+                                        </button>
+                                        <button class="mostview-item__button">
+                                            <i class="ti-save"></i>
+                                        </button>
+                                    </div>
+                                    <div class="mostview-item__layer"></div>
+                                    <img src="./Images/c3gTrEo.jpg" alt="" class="mostview-item__img">
+                                </div>
+                                <div class="mostview-item__panel">
+                                    <h4 class="mostview-item__rank">6</h4>
+                                    <div class="mostview-item__info">
+                                        <p class="mostview-item__name">Fullmetal Alchemist: BD</p>
+                                        <p class="mostview-item__episode">51 tập</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href = "./web.html" class="mostview-item">
+                            <div>
+                                <div class="mostview-item__overlay">
+                                    <div class="mostview-item__Box">
+                                        <button class="mostview-item__button mostview-item__button-green">
+                                            <i class="ti-angle-right"></i>
+                                        </button>
+                                        <button class="mostview-item__button">
+                                            <i class="ti-save"></i>
+                                        </button>
+                                    </div>
+                                    <div class="mostview-item__layer"></div>
+                                    <img src="./Images/c3gTrEo.jpg" alt="" class="mostview-item__img">
+                                </div>
+                                <div class="mostview-item__panel">
+                                    <h4 class="mostview-item__rank">7</h4>
+                                    <div class="mostview-item__info">
+                                        <p class="mostview-item__name">Fullmetal Alchemist: BD</p>
+                                        <p class="mostview-item__episode">51 tập</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href = "./web.html" class="mostview-item">
+                            <div>
+                                <div class="mostview-item__overlay">
+                                    <div class="mostview-item__Box">
+                                        <button class="mostview-item__button mostview-item__button-green">
+                                            <i class="ti-angle-right"></i>
+                                        </button>
+                                        <button class="mostview-item__button">
+                                            <i class="ti-save"></i>
+                                        </button>
+                                    </div>
+                                    <div class="mostview-item__layer"></div>
+                                    <img src="./Images/c3gTrEo.jpg" alt="" class="mostview-item__img">
+                                </div>
+                                <div class="mostview-item__panel">
+                                    <h4 class="mostview-item__rank">8</h4>
+                                    <div class="mostview-item__info">
+                                        <p class="mostview-item__name">Fullmetal Alchemist: BD</p>
+                                        <p class="mostview-item__episode">51 tập</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -116,16 +443,128 @@
         <div class="section">
             <h3 class="section-header">Dành riêng cho VIP</h3>
             <div class="section-content">
-                <div class="section-button-left"></div>
-                <div class="section-button-right"></div>
+                <div class="section-button-left" id ="btn-left2">
+                    <i class="ti-angle-left section-button-icon"></i>
+                </div>
+                <div class="section-button-right" id ="btn-right2">
+                    <i class="ti-angle-right section-button-icon"></i>
+                </div>
 
-                <div class="hot-item">
-                    <div class="hot-item__episode">8/8</div>
-                    <div class="hot-item__name">Dota: The Dragon’s Blood</div>
+                <div class="section-box">
+                    <div class="section-box__content" id = "content2">
+                        <div class="hot-item">
+                            <a href = "./web.html"  class="hot-item__content">
+                                <div class="mostview-item__layer"></div>
+                                <img src="./Images/dota.jpg" alt="" class="hot-item__img">
+                                <div class="hot-item__icon"></div>
+                                <div class="hot-item__episode">8/8</div>
+                                <div class="hot-item__name">Dota: The Dragon’s Blood</div>
+                            </a>
+                        </div>
+                        <div class="hot-item">
+                            <a href = "./web.html"  class="hot-item__content">
+                                <div class="mostview-item__layer"></div>
+                                <img src="./Images/dota.jpg" alt="" class="hot-item__img">
+                                <div class="hot-item__icon"></div>
+                                <div class="hot-item__episode">8/8</div>
+                                <div class="hot-item__name">Dota: The Dragon’s Blood</div>
+                            </a>
+                        </div>
+                        <div class="hot-item">
+                            <a href = "./web.html"  class="hot-item__content">
+                                <div class="mostview-item__layer"></div>
+                                <img src="./Images/dota.jpg" alt="" class="hot-item__img">
+                                <div class="hot-item__icon"></div>
+                                <div class="hot-item__episode">8/8</div>
+                                <div class="hot-item__name">Dota: The Dragon’s Blood</div>
+                            </a>
+                        </div>
+                        <div class="hot-item">
+                            <a href = "./web.html"  class="hot-item__content">
+                                <div class="mostview-item__layer"></div>
+                                <img src="./Images/dota.jpg" alt="" class="hot-item__img">
+                                <div class="hot-item__icon"></div>
+                                <div class="hot-item__episode">8/8</div>
+                                <div class="hot-item__name">Dota: The Dragon’s Blood</div>
+                            </a>
+                        </div>
+                        <div class="hot-item">
+                            <a href = "./web.html"  class="hot-item__content">
+                                <div class="mostview-item__layer"></div>
+                                <img src="./Images/dota.jpg" alt="" class="hot-item__img">
+                                <div class="hot-item__icon"></div>
+                                <div class="hot-item__episode">8/8</div>
+                                <div class="hot-item__name">Dota: The Dragon’s Blood</div>
+                            </a>
+                        </div>
+                        <div class="hot-item">
+                            <a href = "./web.html"  class="hot-item__content">
+                                <div class="mostview-item__layer"></div>
+                                <img src="./Images/dota.jpg" alt="" class="hot-item__img">
+                                <div class="hot-item__icon"></div>
+                                <div class="hot-item__episode">8/8</div>
+                                <div class="hot-item__name">Dota: The Dragon’s Blood</div>
+                            </a>
+                        </div>
+                        <div class="hot-item">
+                            <a href = "./web.html"  class="hot-item__content">
+                                <div class="mostview-item__layer"></div>
+                                <img src="./Images/dota.jpg" alt="" class="hot-item__img">
+                                <div class="hot-item__icon"></div>
+                                <div class="hot-item__episode">8/8</div>
+                                <div class="hot-item__name">Dota: The Dragon’s Blood</div>
+                            </a>
+                        </div>
+                        <div class="hot-item">
+                            <a href = "./web.html"  class="hot-item__content">
+                                <div class="mostview-item__layer"></div>
+                                <img src="./Images/dota.jpg" alt="" class="hot-item__img">
+                                <div class="hot-item__icon"></div>
+                                <div class="hot-item__episode">8/8</div>
+                                <div class="hot-item__name">Dota: The Dragon’s Blood</div>
+                            </a>
+                        </div>
+                        <div class="hot-item">
+                            <a href = "./web.html"  class="hot-item__content">
+                                <div class="mostview-item__layer"></div>
+                                <img src="./Images/dota.jpg" alt="" class="hot-item__img">
+                                <div class="hot-item__icon"></div>
+                                <div class="hot-item__episode">8/8</div>
+                                <div class="hot-item__name">Dota: The Dragon’s Blood</div>
+                            </a>
+                        </div>
+                        <div class="hot-item">
+                            <a href = "./web.html"  class="hot-item__content">
+                                <div class="mostview-item__layer"></div>
+                                <img src="./Images/dota.jpg" alt="" class="hot-item__img">
+                                <div class="hot-item__icon"></div>
+                                <div class="hot-item__episode">8/8</div>
+                                <div class="hot-item__name">Dota: The Dragon’s Blood</div>
+                            </a>
+                        </div>
+                        <div class="hot-item">
+                            <a href = "./web.html"  class="hot-item__content">
+                                <div class="mostview-item__layer"></div>
+                                <img src="./Images/dota.jpg" alt="" class="hot-item__img">
+                                <div class="hot-item__icon"></div>
+                                <div class="hot-item__episode">8/8</div>
+                                <div class="hot-item__name">Dota: The Dragon’s Blood</div>
+                            </a>
+                        </div>
+                        <div class="hot-item">
+                            <a href = "./web.html"  class="hot-item__content">
+                                <div class="mostview-item__layer"></div>
+                                <img src="./Images/dota.jpg" alt="" class="hot-item__img">
+                                <div class="hot-item__icon"></div>
+                                <div class="hot-item__episode">8/8</div>
+                                <div class="hot-item__name">Dota: The Dragon’s Blood</div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <a href="#" class="vip-panel grid">
+        <a href="#" class="grid">
             <img src="./Images/banner.jpg" alt="" class="vip-panel__img">
         </a>
 
@@ -138,11 +577,248 @@
                     <div class="new-section__filter">
                     </div>
                 </div>
+
                 <div class="new-section__content">
-                    <img src="./Images/c3gTrEo.jpg" class = "new-section__content-img" alt="">
-                    <div class="new-section__content-episode">289/??</div>
-                    <p class="new-section__content-name">Boruto:Next Generation</p>
+                    <div class="new-section__line">
+                        <div class="new-section__item">
+                            <div>
+                                <a href = "./film.html" class="new-section__item-info">
+                                    <img src="./Images/c3gTrEo.jpg" class = "new-section__content-img" alt="">
+                                    <div class="mostview-item__layer"></div>
+                                    <div class="new-section__item-icon"></div>
+                                    <div class="new-section__content-episode">289/??</div>
+                                </a>
+                                <a href = "./film.html" class="new-section__content-name">Boruto:Next Generation</a>
+                            </div>
+                        </div>
+                    
+                        <div class="new-section__item">
+                            <div>
+                                <a href = "./film.html" class="new-section__item-info">
+                                    <img src="./Images/c3gTrEo.jpg" class = "new-section__content-img" alt="">
+                                    <div class="mostview-item__layer"></div>
+                                    <div class="new-section__item-icon"></div>
+                                    <div class="new-section__content-episode">289/??</div>
+                                </a>
+                                <a href = "./film.html" class="new-section__content-name">Boruto:Next Generation</a>
+                            </div>
+                        </div>
+                        <div class="new-section__item">
+                            <div>
+                                <a href = "./film.html" class="new-section__item-info">
+                                    <img src="./Images/c3gTrEo.jpg" class = "new-section__content-img" alt="">
+                                    <div class="mostview-item__layer"></div>
+                                    <div class="new-section__item-icon"></div>
+                                    <div class="new-section__content-episode">289/??</div>
+                                </a>
+                                <a href = "./film.html" class="new-section__content-name">Boruto:Next Generation</a>
+                            </div>
+                        </div>
+                    
+                        <div class="new-section__item">
+                            <div>
+                                <a href = "./film.html" class="new-section__item-info">
+                                    <img src="./Images/c3gTrEo.jpg" class = "new-section__content-img" alt="">
+                                    <div class="mostview-item__layer"></div>
+                                    <div class="new-section__item-icon"></div>
+                                    <div class="new-section__content-episode">289/??</div>
+                                </a>
+                                <a href = "./film.html" class="new-section__content-name">Boruto:Next Generation</a>
+                            </div>
+                        </div>
+                        <div class="new-section__item">
+                            <div>
+                                <a href = "./film.html" class="new-section__item-info">
+                                    <img src="./Images/c3gTrEo.jpg" class = "new-section__content-img" alt="">
+                                    <div class="mostview-item__layer"></div>
+                                    <div class="new-section__item-icon"></div>
+                                    <div class="new-section__content-episode">289/??</div>
+                                </a>
+                                <a href = "./film.html" class="new-section__content-name">Boruto:Next Generation</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-section__line">
+                        <div class="new-section__item">
+                            <div>
+                                <a href = "./film.html" class="new-section__item-info">
+                                    <img src="./Images/c3gTrEo.jpg" class = "new-section__content-img" alt="">
+                                    <div class="mostview-item__layer"></div>
+                                    <div class="new-section__item-icon"></div>
+                                    <div class="new-section__content-episode">289/??</div>
+                                </a>
+                                <a href = "./film.html" class="new-section__content-name">Boruto:Next Generation</a>
+                            </div>
+                        </div>
+                    
+                        <div class="new-section__item">
+                            <div>
+                                <a href = "./film.html" class="new-section__item-info">
+                                    <img src="./Images/c3gTrEo.jpg" class = "new-section__content-img" alt="">
+                                    <div class="mostview-item__layer"></div>
+                                    <div class="new-section__item-icon"></div>
+                                    <div class="new-section__content-episode">289/??</div>
+                                </a>
+                                <a href = "./film.html" class="new-section__content-name">Boruto:Next Generation</a>
+                            </div>
+                        </div>
+                        <div class="new-section__item">
+                            <div>
+                                <a href = "./film.html" class="new-section__item-info">
+                                    <img src="./Images/c3gTrEo.jpg" class = "new-section__content-img" alt="">
+                                    <div class="mostview-item__layer"></div>
+                                    <div class="new-section__item-icon"></div>
+                                    <div class="new-section__content-episode">289/??</div>
+                                </a>
+                                <a href = "./film.html" class="new-section__content-name">Boruto:Next Generation</a>
+                            </div>
+                        </div>
+                    
+                        <div class="new-section__item">
+                            <div>
+                                <a href = "./film.html" class="new-section__item-info">
+                                    <img src="./Images/c3gTrEo.jpg" class = "new-section__content-img" alt="">
+                                    <div class="mostview-item__layer"></div>
+                                    <div class="new-section__item-icon"></div>
+                                    <div class="new-section__content-episode">289/??</div>
+                                </a>
+                                <a href = "./film.html" class="new-section__content-name">Boruto:Next Generation</a>
+                            </div>
+                        </div>
+                        <div class="new-section__item">
+                            <div>
+                                <a href = "./film.html" class="new-section__item-info">
+                                    <img src="./Images/c3gTrEo.jpg" class = "new-section__content-img" alt="">
+                                    <div class="mostview-item__layer"></div>
+                                    <div class="new-section__item-icon"></div>
+                                    <div class="new-section__content-episode">289/??</div>
+                                </a>
+                                <a href = "./film.html" class="new-section__content-name">Boruto:Next Generation</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-section__line">
+                        <div class="new-section__item">
+                            <div>
+                                <a href = "./film.html" class="new-section__item-info">
+                                    <img src="./Images/c3gTrEo.jpg" class = "new-section__content-img" alt="">
+                                    <div class="mostview-item__layer"></div>
+                                    <div class="new-section__item-icon"></div>
+                                    <div class="new-section__content-episode">289/??</div>
+                                </a>
+                                <a href = "./film.html" class="new-section__content-name">Boruto:Next Generation</a>
+                            </div>
+                        </div>
+                    
+                        <div class="new-section__item">
+                            <div>
+                                <a href = "./film.html" class="new-section__item-info">
+                                    <img src="./Images/c3gTrEo.jpg" class = "new-section__content-img" alt="">
+                                    <div class="mostview-item__layer"></div>
+                                    <div class="new-section__item-icon"></div>
+                                    <div class="new-section__content-episode">289/??</div>
+                                </a>
+                                <a href = "./film.html" class="new-section__content-name">Boruto:Next Generation</a>
+                            </div>
+                        </div>
+                        <div class="new-section__item">
+                            <div>
+                                <a href = "./film.html" class="new-section__item-info">
+                                    <img src="./Images/c3gTrEo.jpg" class = "new-section__content-img" alt="">
+                                    <div class="mostview-item__layer"></div>
+                                    <div class="new-section__item-icon"></div>
+                                    <div class="new-section__content-episode">289/??</div>
+                                </a>
+                                <a href = "./film.html" class="new-section__content-name">Boruto:Next Generation</a>
+                            </div>
+                        </div>
+                    
+                        <div class="new-section__item">
+                            <div>
+                                <a href = "./film.html" class="new-section__item-info">
+                                    <img src="./Images/c3gTrEo.jpg" class = "new-section__content-img" alt="">
+                                    <div class="mostview-item__layer"></div>
+                                    <div class="new-section__item-icon"></div>
+                                    <div class="new-section__content-episode">289/??</div>
+                                </a>
+                                <a href = "./film.html" class="new-section__content-name">Boruto:Next Generation</a>
+                            </div>
+                        </div>
+                        <div class="new-section__item">
+                            <div>
+                                <a href = "./film.html" class="new-section__item-info">
+                                    <img src="./Images/c3gTrEo.jpg" class = "new-section__content-img" alt="">
+                                    <div class="mostview-item__layer"></div>
+                                    <div class="new-section__item-icon"></div>
+                                    <div class="new-section__content-episode">289/??</div>
+                                </a>
+                                <a href = "./film.html" class="new-section__content-name">Boruto:Next Generation</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-section__line">
+                        <div class="new-section__item">
+                            <div>
+                                <a href = "./film.html" class="new-section__item-info">
+                                    <img src="./Images/c3gTrEo.jpg" class = "new-section__content-img" alt="">
+                                    <div class="mostview-item__layer"></div>
+                                    <div class="new-section__item-icon"></div>
+                                    <div class="new-section__content-episode">289/??</div>
+                                </a>
+                                <a href = "./film.html" class="new-section__content-name">Boruto:Next Generation</a>
+                            </div>
+                        </div>
+                    
+                        <div class="new-section__item">
+                            <div>
+                                <a href = "./film.html" class="new-section__item-info">
+                                    <img src="./Images/c3gTrEo.jpg" class = "new-section__content-img" alt="">
+                                    <div class="mostview-item__layer"></div>
+                                    <div class="new-section__item-icon"></div>
+                                    <div class="new-section__content-episode">289/??</div>
+                                </a>
+                                <a href = "./film.html" class="new-section__content-name">Boruto:Next Generation</a>
+                            </div>
+                        </div>
+                        <div class="new-section__item">
+                            <div>
+                                <a href = "./film.html" class="new-section__item-info">
+                                    <img src="./Images/c3gTrEo.jpg" class = "new-section__content-img" alt="">
+                                    <div class="mostview-item__layer"></div>
+                                    <div class="new-section__item-icon"></div>
+                                    <div class="new-section__content-episode">289/??</div>
+                                </a>
+                                <a href = "./film.html" class="new-section__content-name">Boruto:Next Generation</a>
+                            </div>
+                        </div>
+                    
+                        <div class="new-section__item">
+                            <div>
+                                <a href = "./film.html" class="new-section__item-info">
+                                    <img src="./Images/c3gTrEo.jpg" class = "new-section__content-img" alt="">
+                                    <div class="mostview-item__layer"></div>
+                                    <div class="new-section__item-icon"></div>
+                                    <div class="new-section__content-episode">289/??</div>
+                                </a>
+                                <a href = "./film.html" class="new-section__content-name">Boruto:Next Generation</a>
+                            </div>
+                        </div>
+                        <div class="new-section__item">
+                            <div>
+                                <a href = "./film.html" class="new-section__item-info">
+                                    <img src="./Images/c3gTrEo.jpg" class = "new-section__content-img" alt="">
+                                    <div class="mostview-item__layer"></div>
+                                    <div class="new-section__item-icon"></div>
+                                    <div class="new-section__content-episode">289/??</div>
+                                </a>
+                                <a href = "./film.html" class="new-section__content-name">Boruto:Next Generation</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                
+
+
                 <div class="new-section__nav">
                     <a href="#" class="new-section__nav-button new-section__nav-button-activated">1</a>
                     <a href="#" class="new-section__nav-button">2</a>
@@ -163,6 +839,28 @@
                         <a href = "#" class="content-section__link">Xem tất cả</a>
                     </div>
                     <div class="content-section__content">
+                        <div class="content-section__item content-section__item-even">
+                            <img src="./Images/Qmx2kQ9.jpg" alt="" class="content-section__item-img">
+                            <div class="content-section__item-side">
+                                <div class="content-section__item-info">
+                                    <h5 class="content-section__item-header">Fairy Tail</h5>
+                                    <p class="content-section__item-text">Tập: 8/10</p>
+                                    <p class="content-section__item-text">Đánh giá 9/10</p>
+                                </div>
+                                
+                                <div class="content-section__item-rate">
+                                    <label for=""><i class="ti-eye"></i>0.4M </label>
+                                    
+                                    <i class="ti-heart"></i> 0.2M
+                                    <i class="ti-comment"></i> 9M
+                                </div>
+
+                                <p class="content-section__item-date">7 ngày trước</p>
+                            </div>
+                        </div>
+                        <div class="content-section__item ">
+    
+                        </div>
                         <div class="content-section__item content-section__item-even">
                             <img src="./Images/Qmx2kQ9.jpg" alt="" class="content-section__item-img">
                             <div class="content-section__item-side">
@@ -214,6 +912,25 @@
                         <div class="content-section__item ">
     
                         </div>
+                        <div class="content-section__item content-section__item-even">
+                            <img src="./Images/Qmx2kQ9.jpg" alt="" class="content-section__item-img">
+                            <div class="content-section__item-line">
+                                <div class="content-section__item-info">
+                                    <h5 class="content-section__item-header">Fairy Tail</h5>
+                                    <p class="content-section__item-text">Tập: 8/10</p>
+                                </div>
+                                <a href = "#" class="content-section__item-link">xem tiếp tập 7></a>
+                                <a href = "#" class="content-section__item-del">
+                                    <i class="ti-close"></i>
+                                    Xóa
+                                </a>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="content-section__item ">
+    
+                        </div>
                     
                     </div>
                 </div>
@@ -223,6 +940,41 @@
 
         <div class="bottom-board grid">
             <div class="bottom-list p-4 m-12">
+                <div class="bottom-content" id = "PHIM_LE">
+                    <div class="bottom-list__top">
+                        <h4 class="bottom-list__header">TOP PHIM BỘ</h4>
+    
+                        <div class="bottom-list__option">
+                            <button class="bottom-list__button bottom-list__button-activated">Tuần</button>
+                            <button class="bottom-list__button">Tháng</button>
+                            <button class="bottom-list__button">Năm</button>
+                        </div>
+                    </div>
+    
+                    <div class="bottom-list__content">
+                        <div class="bottom-list__item bottom-list__item-even">
+                            <h5 class="bottom-list__item-rank">1</h5>
+                            <img src="./Images/Qmx2kQ9.jpg" alt="" class="bottom-list__item-img">
+                            <div class="bottom-list__item-info">
+                                <p class="bottom-list__item-name">Spirited Away</p>
+                                <p class="bottom-list__item-genre">Thể loại: Phiêu lưu, siêu nhiên</p>
+                            </div>
+                            <p class="bottom-list__item-rate">
+                                <i class="ti-eye"></i>
+                                5.5M
+                            </p>
+                        </div>
+
+                        <div class="bottom-list__item">
+
+                        </div>
+                        
+
+                    </div>
+                </div>
+            </div>    
+
+            <div class="bottom-list p-4 m-12" id = "PHIM_BO">
                 <div class="bottom-content">
                     <div class="bottom-list__top">
                         <h4 class="bottom-list__header">TOP PHIM LẺ</h4>
@@ -256,7 +1008,39 @@
                 </div>
             </div>    
 
+            <div class="bottom-list p-4 m-12">
+                <div class="bottom-content">
+                    <div class="bottom-list__top">
+                        <h4 class="bottom-list__header">TOP HOẠT HÌNH</h4>
+    
+                        <div class="bottom-list__option">
+                            <button class="bottom-list__button bottom-list__button-activated">Tuần</button>
+                            <button class="bottom-list__button">Tháng</button>
+                            <button class="bottom-list__button">Năm</button>
+                        </div>
+                    </div>
+    
+                    <div class="bottom-list__content">
+                        <div class="bottom-list__item bottom-list__item-even">
+                            <h5 class="bottom-list__item-rank">1</h5>
+                            <img src="./Images/Qmx2kQ9.jpg" alt="" class="bottom-list__item-img">
+                            <div class="bottom-list__item-info">
+                                <p class="bottom-list__item-name">Spirited Away</p>
+                                <p class="bottom-list__item-genre">Thể loại: Phiêu lưu, siêu nhiên</p>
+                            </div>
+                            <p class="bottom-list__item-rate">
+                                <i class="ti-eye"></i>
+                                5.5M
+                            </p>
+                        </div>
 
+                        <div class="bottom-list__item">
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>    
         </div>
     </div>
 
@@ -269,9 +1053,9 @@
                 </div>
 
                 <div class="footer-media">
-                    <a href="#" class="footer-media__link"><i class="ti-twitter-alt"></i></a>
-                    <a href="#" class="footer-media__link"><i class="ti-facebook"></i></a>
-                    <a href="#" class="footer-media__link"><i class="ti-instagram"></i></a>
+                    <a href="https://twitter.com/wudilieliez" class="footer-media__link"><i class="ti-twitter-alt"></i></a>
+                    <a href="https://www.facebook.com/SousouNoFrierenFanpage" class="footer-media__link"><i class="ti-facebook"></i></a>
+                    <a href="https://www.instagram.com/wudilieliez/" class="footer-media__link"><i class="ti-instagram"></i></a>
                 </div>
             </div>
 
@@ -301,14 +1085,14 @@
             </div>
             <div class="footer-side">
                 <div class="footer-side_line">
-                    <a href="#">
+                    <a href="https://apps.apple.com/vn/app/apple-store/id375380948?l=vi">
                         <img src ="./Images/Apple.png" class="footer-side__line-img"></img>
                     </a>
-                    <a href="#">
+                    <a href="https://play.google.com/store/games?hl=vi&gl=US">
                         <img src ="./Images/Google.png" class="footer-side__line-img"></img>
                     </a>
                 </div>
-                <a href="#">
+                <a href="/index.html">
                     <img src="./Images/logo.png" alt="" class="footer-side-img">
                 </a>
                 
@@ -318,5 +1102,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="./script.js"></script>
 </body>
 </html>
