@@ -921,6 +921,12 @@ body{
     color: #ddd;
     font-size: 1.4rem;
 }
+
+.content-section__link:hover{
+    color: #fff;
+    font-weight: 500;
+}
+
 .content-section__content{
     display: flex;
     flex-direction: column;
@@ -934,7 +940,13 @@ body{
     padding: 10px 16px;
     box-sizing: border-box;
     height: 100px;
+    text-decoration: none;
 }
+
+.content-section__item:hover{
+    opacity: 0.7;
+}
+
 .content-section__item-even{
     background-color: #444;
 }
@@ -997,19 +1009,24 @@ body{
     bottom: 16px;
     color: #fff;
     font-weight: 900;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
-.content-section__item-link:hover,
+.content-section__item-link:hover{
+    color: #3a79af;
+    font-size: 1.6rem;
+    font-weight: 900;
+}
 .content-section__item-del:hover{
-    color: #000;
+    color: red;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 /* ---------------------/SIDE CONTENT/--------------------- */
 
 
 .bottom-board{
-    height: 400px;
     display: flex;
 }
 .bottom-list{
@@ -1057,7 +1074,7 @@ body{
 }
 
 .bottom-list__content{
-
+    margin-bottom: 40px;
 }
 
 /* -----------/Bottom Item/-----------*/
@@ -1068,7 +1085,13 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    text-decoration: none;
 }
+
+.bottom-list__item:hover{
+    opacity: 0.7;
+}
+
 .bottom-list__item-even{
     background-color: rgba(217, 217, 217, 0.1);
 }
