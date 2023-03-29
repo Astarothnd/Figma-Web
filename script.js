@@ -34,13 +34,18 @@ function make_slide1(){
         content1.style.transform = `translateX(${-count}px)`;
     })
 
+    count += item_width;
+    if (count > max_width){
+        count = 0;
+    }
+    content1.style.transform = `translateX(${-count}px)`;
     interval1 = setInterval(function(){
         count += item_width;
         if (count > max_width){
             count = 0;
         }
         content1.style.transform = `translateX(${-count}px)`;
-    }, 7000)
+    }, 3000)
 
 }
 
@@ -72,13 +77,18 @@ function make_slide2(){
         content2.style.transform = `translateX(${-count}px)`;
     })
 
+    count += item_width;
+    if (count > max_width){
+        count = 0;
+    }
+    content2.style.transform = `translateX(${-count}px)`;
     interval2 = setInterval(function(){
         count += item_width;
         if (count > max_width){
             count = 0;
         }
         content2.style.transform = `translateX(${-count}px)`;
-    }, 5000)
+    }, 2000)
 }
 
 // SLIDE 3 : Nhiều lượt xem nhất //
@@ -112,16 +122,53 @@ function make_slide3(){
         content3.style.transform = `translateX(${-count}px)`;
     })
 
+    count += item_width;
+    if (count > max_width){
+        count = 0;
+    }
+    content3.style.transform = `translateX(${-count}px)`;
     interval3 = setInterval(function(){
         count += item_width;
         if (count > max_width){
             count = 0;
         }
         content3.style.transform = `translateX(${-count}px)`;
-    }, 10000)
+    }, 4000)
 }
 
 
+// MOBILE SEARCH FUNCTION//
+const search_button = document.querySelector('.header-search__button')
+const mobile_search = document.querySelector('.mobile-search')
+
+const mobile_class = 'mobile-search__activated'
+const search_class = 'header-search__button-activated'
+var isMobile = false
+var opening = false
+
+if (this.window.innerWidth <= 768){
+    isMobile = true
+}else{
+    isMobile = false
+}
+
+search_button.addEventListener('click',function(){
+    if(isMobile == false){return}
+    
+    if (opening == false){
+        opening = true
+        search_button.classList.add(search_class)
+        mobile_search.classList.add(mobile_class)
+    }else{
+        opening = false
+        search_button.classList.remove(search_class)
+        mobile_search.classList.remove(mobile_class)
+    }
+})
+
+
+
+// MAIN FUNCTION//
 function Clear(){
     clearInterval(interval1)
     clearInterval(interval2)
@@ -131,6 +178,15 @@ function Clear(){
 document.addEventListener('DOMContentLoaded', function () {
     // responsive
     window.addEventListener('resize', function () {
+
+        if (this.window.innerWidth <= 768){
+            isMobile = true
+        }else{
+            isMobile = false
+            opening = false
+            search_button.classList.remove(search_class)
+            mobile_search.classList.remove(mobile_class)    
+        }
         Clear()
         make_slide1()
         make_slide2()

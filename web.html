@@ -27,8 +27,9 @@
                 <div class="header-search">
                     <input type="text" placeholder="Tìm kiếm" name="" id="" class="header-search__textbox">
                     
-                    <button class="header-search__button">
-                        <i class="ti-search"></i>
+                    <button class="header-search__button ">
+                        <i class="ti-search header-search__icon1"></i>
+                        <i class="ti-close header-search__icon2"></i>
                     </button>
                 </div>
 
@@ -74,6 +75,14 @@
                     </div>
                 </button>
             </div>
+            <div class="mobile-search">
+                <div class="mobile-search__content grid">
+                    <input placeholder="Tìm kiếm" type="text" class="mobile-search__bar">
+                    <button class="mobile-search__button">
+                        <i class="mobile-search__icon ti-search"></i>
+                    </button>
+                </div>
+            </div>
         </nav>
       
     </header>
@@ -83,9 +92,9 @@
         <div class="film p-12 m-12">
             <div class="film-panel film-panel__no-margin">
                 <div class="film-background"></div>
-                <div class="film-info ">
+                <div class="film-info">
                     <div class="film-info__left">
-                        <img src="./Images/UHdlc0p.jpg" alt="" class="film-info__img">
+                        <img src="./Images/Attack On Titan.jpg" alt="" class="film-info__img">
                     </div>
                     <div class="film-info__right">
                         <h4 class="film-info__header">Shingeki no Kyojin: The Final Season Part 2</h4>
@@ -148,24 +157,18 @@
                     <div class="film-line__panel">
                         <h4 class="film-line__header">Danh sách tập</h4>
                         <div class="film-episode">
-                            <div class="film-episode__line">
-                                <a href="#" class="film-episode__item">1</a>
-                                <a href="#" class="film-episode__item">2</a>
-                                <a href="#" class="film-episode__item">3</a>
-                                <a href="#" class="film-episode__item">4</a>
-                            </div>
-                            <div class="film-episode__line">
-                                <a href="#" class="film-episode__item">5</a>
-                                <a href="#" class="film-episode__item">6</a>
-                                <a href="#" class="film-episode__item">7</a>
-                                <a href="#" class="film-episode__item">8</a>
-                            </div>
-                            <div class="film-episode__line">
-                                <a href="#" class="film-episode__item">9</a>
-                                <a href="#" class="film-episode__item">10</a>
-                                <a href="#" class="film-episode__item">11</a>
-                                <a href="#" class="film-episode__item">12</a>
-                            </div>
+                            <div class="film-episode__item"><a href="#" class="film-episode__link">1</a></div>
+                            <div class="film-episode__item"><a href="#" class="film-episode__link">2</a></div>
+                            <div class="film-episode__item"><a href="#" class="film-episode__link">3</a></div>
+                            <div class="film-episode__item"><a href="#" class="film-episode__link">4</a></div>
+                            <div class="film-episode__item"><a href="#" class="film-episode__link">5</a></div>
+                            <div class="film-episode__item"><a href="#" class="film-episode__link">6</a></div>
+                            <div class="film-episode__item"><a href="#" class="film-episode__link">7</a></div>
+                            <div class="film-episode__item"><a href="#" class="film-episode__link">8</a></div>
+                            <div class="film-episode__item"><a href="#" class="film-episode__link">9</a></div>
+                            <div class="film-episode__item"><a href="#" class="film-episode__link">10</a></div>
+                            <div class="film-episode__item"><a href="#" class="film-episode__link">11</a></div>
+                            <div class="film-episode__item"><a href="#" class="film-episode__link">12</a></div>
                         </div>
                     </div>
                 </div>
@@ -184,7 +187,7 @@
                             <i class="ti-comment-alt"></i>
                             Bình luận (753)
                         </h4>
-                        <button class="film-comment__login">Đăng nhập để bình luận</button>
+                        <a href = "./login.html" class="film-comment__login">Đăng nhập để bình luận</a>
                     </div>
                     
                     <div class="film-comment__content">
@@ -193,13 +196,16 @@
                             <div class="film-comment__item-right">
                                 <p class="film-comment__item-header">SIÊU NHÂN 16</p>
                                 <p class="film-comment__item-text">Bộ này tệ quá, không có harem</p>
+                                <p class="film-comment__item-date">7 tháng trước</p>
                             </div>
                         </div>
                         <div class="film-comment__item">
                             <div class="film-comment__item-left"></div>
                             <div class="film-comment__item-right">
-                                <p class="film-comment__item-header">SIÊU NHÂN 16</p>
-                                <p class="film-comment__item-text">Bộ này tệ quá, không có harem</p>
+                                <p class="film-comment__item-header">SIÊU NHÂN 12</p>
+                                <p class="film-comment__item-text">"Trai thích của lạ , quạ thích gà con Gái đã có con , ngon và độc lạ " #Yamaha #R6.</p>
+                                <p class="film-comment__item-date">8 tháng trước</p>
+
                             </div>
                         </div>
                     </div>
@@ -210,23 +216,23 @@
         </div>
 
 
-        <div class="bottom-board grid">
+        <div class="bottom-board">
             <div class="bottom-list p-4 m-12">
-                <div class="bottom-content">
+                <div class="bottom-content" id = "PHIM_LE">
                     <div class="bottom-list__top">
                         <h4 class="bottom-list__header">TOP PHIM LẺ</h4>
-    
-                        <div class="bottom-list__option">
+
+                        <div>
                             <button class="bottom-list__button bottom-list__button-activated">Tuần</button>
                             <button class="bottom-list__button">Tháng</button>
                             <button class="bottom-list__button">Năm</button>
                         </div>
                     </div>
-    
-                    <div class="bottom-list__content">
-                        <div class="bottom-list__item bottom-list__item-even">
+
+                    <div>
+                        <a href="./web.html" class="bottom-list__item bottom-list__item-even">
                             <h5 class="bottom-list__item-rank">1</h5>
-                            <img src="./Images/Qmx2kQ9.jpg" alt="" class="bottom-list__item-img">
+                            <img src="./Images/Spirited Away.jpg" alt="" class="bottom-list__item-img">
                             <div class="bottom-list__item-info">
                                 <p class="bottom-list__item-name">Spirited Away</p>
                                 <p class="bottom-list__item-genre">Thể loại: Phiêu lưu, siêu nhiên</p>
@@ -235,17 +241,221 @@
                                 <i class="ti-eye"></i>
                                 5.5M
                             </p>
-                        </div>
+                        </a>
 
-                        <div class="bottom-list__item">
+                        <a href="./web.html" class="bottom-list__item ">
+                            <h5 class="bottom-list__item-rank">3</h5>
+                            <img src="./Images/Lồng côn trùng.jpg" alt="" class="bottom-list__item-img">
+                            <div class="bottom-list__item-info">
+                                <p class="bottom-list__item-name">Lồng Côn rùng</p>
+                                <p class="bottom-list__item-genre">Thể loại: Khoa học, viễn tưởng</p>
+                            </div>
+                            <p class="bottom-list__item-rate">
+                                <i class="ti-eye"></i>
+                                2.6M
+                            </p>
+                        </a>
 
-                        </div>
+                        <a href="./web.html" class="bottom-list__item bottom-list__item-even">
+                            <h5 class="bottom-list__item-rank">2</h5>
+                            <img src="./Images/Howl's Moving Castle.jpg" alt="" class="bottom-list__item-img">
+                            <div class="bottom-list__item-info">
+                                <p class="bottom-list__item-name">Howl's Moving Castle</p>
+                                <p class="bottom-list__item-genre">Thể loại: Hoạt hình, viễn tưởng</p>
+                            </div>
+                            <p class="bottom-list__item-rate">
+                                <i class="ti-eye"></i>
+                                5.5M
+                            </p>
+                        </a>
 
+                        <a href="./web.html" class="bottom-list__item">
+                            <h5 class="bottom-list__item-rank">4</h5>
+                            <img src="./Images/Hathaway.jpg" alt="" class="bottom-list__item-img">
+                            <div class="bottom-list__item-info">
+                                <p class="bottom-list__item-name">Mobile Suit Gundam: Hathaway</p>
+                                <p class="bottom-list__item-genre">Thể loại: Mecha, viễn tưởng</p>
+                            </div>
+                            <p class="bottom-list__item-rate">
+                                <i class="ti-eye"></i>
+                                1.1M
+                            </p>
+                        </a>
+                        <a href="./web.html" class="bottom-list__item bottom-list__item-even">
+                            <h5 class="bottom-list__item-rank">5</h5>
+                            <img src="./Images/Mononoke.jpg" alt="" class="bottom-list__item-img">
+                            <div class="bottom-list__item-info">
+                                <p class="bottom-list__item-name">Princess Mononoke</p>
+                                <p class="bottom-list__item-genre">Thể loại: Kinh dị, lịch sử</p>
+                            </div>
+                            <p class="bottom-list__item-rate">
+                                <i class="ti-eye"></i>
+                                0.9M
+                            </p>
+                        </a>
                     </div>
                 </div>
             </div>    
 
+            <div class="bottom-list p-4 m-12" id = "PHIM_BO">
+                <div class="bottom-content">
+                    <div class="bottom-list__top">
+                        <h4 class="bottom-list__header">TOP PHIM BỘ</h4>
 
+                        <div>
+                            <button class="bottom-list__button bottom-list__button-activated">Tuần</button>
+                            <button class="bottom-list__button">Tháng</button>
+                            <button class="bottom-list__button">Năm</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <a href="./web.html" class="bottom-list__item bottom-list__item-even">
+                            <h5 class="bottom-list__item-rank">1</h5>
+                            <img src="./Images/Fullmetal Alchemist.jpg" alt="" class="bottom-list__item-img">
+                            <div class="bottom-list__item-info">
+                                <p class="bottom-list__item-name">Fullmetal Alchemist: Brotherhood</p>
+                                <p class="bottom-list__item-genre">Thể loại: Shounen, viễn tưởng</p>
+                            </div>
+                            <p class="bottom-list__item-rate">
+                                <i class="ti-eye"></i>
+                                10M
+                            </p>
+                        </a>
+
+                        <a href="./web.html" class="bottom-list__item ">
+                            <h5 class="bottom-list__item-rank">2</h5>
+                            <img src="./Images/Naruto Shippuden.jpg" alt="" class="bottom-list__item-img">
+                            <div class="bottom-list__item-info">
+                                <p class="bottom-list__item-name">Naruto Shippuden</p>
+                                <p class="bottom-list__item-genre">Thể loại: Shounen, viễn tưởng</p>
+                            </div>
+                            <p class="bottom-list__item-rate">
+                                <i class="ti-eye"></i>
+                                2.5M
+                            </p>
+                        </a>
+                        <a href="./web.html" class="bottom-list__item bottom-list__item-even">
+                            <h5 class="bottom-list__item-rank">3</h5>
+                            <img src="./Images/Goblin Slayer.jpg" alt="" class="bottom-list__item-img">
+                            <div class="bottom-list__item-info">
+                                <p class="bottom-list__item-name">Goblin Slayer</p>
+                                <p class="bottom-list__item-genre">Thể loại: Hành động, phiêu lưu</p>
+                            </div>
+                            <p class="bottom-list__item-rate">
+                                <i class="ti-eye"></i>
+                                5.5M
+                            </p>
+                        </a>
+
+                        <a href="./web.html" class="bottom-list__item ">
+                            <h5 class="bottom-list__item-rank">5</h5>
+                            <img src="./Images/SAO Alicization.jpg" alt="" class="bottom-list__item-img">
+                            <div class="bottom-list__item-info">
+                                <p class="bottom-list__item-name">Sword Art Online: Alicization</p>
+                                <p class="bottom-list__item-genre">Thể loại: Phiêu lưu, siêu nhiên</p>
+                            </div>
+                            <p class="bottom-list__item-rate">
+                                <i class="ti-eye"></i>
+                                5.5M
+                            </p>
+                        </a>
+
+                        <a href="./web.html" class="bottom-list__item bottom-list__item-even">
+                            <h5 class="bottom-list__item-rank">4</h5>
+                            <img src="./Images/Fate.jpg" alt="" class="bottom-list__item-img">
+                            <div class="bottom-list__item-info">
+                                <p class="bottom-list__item-name">Fate/Stay Night: UBW</p>
+                                <p class="bottom-list__item-genre">Thể loại: Hành động, viễn tưởng</p>
+                            </div>
+                            <p class="bottom-list__item-rate">
+                                <i class="ti-eye"></i>
+                                0.1M
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>    
+
+            <div class="bottom-list p-4 m-12" >
+                <div class="bottom-content">
+                    <div class="bottom-list__top">
+                        <h4 class="bottom-list__header">TOP HOẠT HÌNH</h4>
+
+                        <div>
+                            <button class="bottom-list__button bottom-list__button-activated">Tuần</button>
+                            <button class="bottom-list__button">Tháng</button>
+                            <button class="bottom-list__button">Năm</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <a href="./web.html" class="bottom-list__item bottom-list__item-even">
+                            <h5 class="bottom-list__item-rank">1</h5>
+                            <img src="./Images/Avatar.jpg" alt="" class="bottom-list__item-img">
+                            <div class="bottom-list__item-info">
+                                <p class="bottom-list__item-name">Avatar: The Last Airbender</p>
+                                <p class="bottom-list__item-genre">Thể loại: Hành động, phiêu lưu</p>
+                            </div>
+                            <p class="bottom-list__item-rate">
+                                <i class="ti-eye"></i>
+                                1.1M
+                            </p>
+                        </a>
+
+                        <a href="./web.html" class="bottom-list__item">
+                            <h5 class="bottom-list__item-rank">2</h5>
+                            <img src="./Images/Bocchi The Rock.jpg" alt="" class="bottom-list__item-img">
+                            <div class="bottom-list__item-info">
+                                <p class="bottom-list__item-name">Bocchi The Rock</p>
+                                <p class="bottom-list__item-genre">Thể loại: Hài hước, âm nhạc</p>
+                            </div>
+                            <p class="bottom-list__item-rate">
+                                <i class="ti-eye"></i>
+                                0.5M
+                            </p>
+                        </a>
+                        <a href="./web.html" class="bottom-list__item bottom-list__item-even">
+                            <h5 class="bottom-list__item-rank">3</h5>
+                            <img src="./Images/Bleach.jpg" alt="" class="bottom-list__item-img">
+                            <div class="bottom-list__item-info">
+                                <p class="bottom-list__item-name">Bleach</p>
+                                <p class="bottom-list__item-genre">Thể loại: Hành động, phiêu lưu</p>
+                            </div>
+                            <p class="bottom-list__item-rate">
+                                <i class="ti-eye"></i>
+                                0.4M
+                            </p>
+                        </a>
+
+                        <a href="./web.html" class="bottom-list__item">
+                            <h5 class="bottom-list__item-rank">4</h5>
+                            <img src="./Images/Blue Lock.jpg" alt="" class="bottom-list__item-img">
+                            <div class="bottom-list__item-info">
+                                <p class="bottom-list__item-name">Blue Lock</p>
+                                <p class="bottom-list__item-genre">Thể loại: Thể thao</p>
+                            </div>
+                            <p class="bottom-list__item-rate">
+                                <i class="ti-eye"></i>
+                                0.3M
+                            </p>
+                        </a>
+                        <a href="./web.html" class="bottom-list__item bottom-list__item-even">
+                            <h5 class="bottom-list__item-rank">5</h5>
+                            <img src="./Images/Hotarubi No Mori E.jpg" alt="" class="bottom-list__item-img">
+                            <div class="bottom-list__item-info">
+                                <p class="bottom-list__item-name">Hotaru No Mori E</p>
+                                <p class="bottom-list__item-genre">Thể loại: Lãng mạn, siêu nhiên</p>
+                            </div>
+                            <p class="bottom-list__item-rate">
+                                <i class="ti-eye"></i>
+                                5.5M
+                            </p>
+                        </a>
+
+                    </div>
+                </div>
+            </div>    
         </div>
     </div>
 
@@ -307,5 +517,6 @@
             </div>
         </div>
     </footer>
+    <script src="./script.js"></script>
 </body>
 </html>
