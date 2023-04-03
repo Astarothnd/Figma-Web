@@ -196,5 +196,3 @@ document.addEventListener('DOMContentLoaded', function () {
 make_slide1()
 make_slide2()
 make_slide3()
-
-
