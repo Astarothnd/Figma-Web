@@ -1366,12 +1366,15 @@ body{
 
 /* ----------------------/Film Info/---------------------*/
 
+.film-background-img {
+    width: 100%;
+    height: 100%;
+}
 .film-background{
-    background-image: url(./Images/6361776.webp);
-    background-size: 100% 100%;
     width: 100%;
     height: 400px;
 }
+
 .film-info{
     position: absolute;
     display: flex;

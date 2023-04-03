@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -108,22 +106,22 @@
                     
                     <label class="mainframe-content__line">
                         Email:
-                        <input type="email" class="mainframe-content__box" placeholder="Nhập Email của bạn">
+                        <input id="email" type="email" class="mainframe-content__box" placeholder="Nhập Email của bạn">
                     </label>
                     <label class="mainframe-content__line">
                         Tên người dùng:
-                        <input type="text" class="mainframe-content__box" placeholder="Nhập tên của bạn">
+                        <input id="username" type="text" class="mainframe-content__box" placeholder="Nhập tên của bạn">
                     </label>
                     <label class="mainframe-content__line">
                         Mật khẩu:
-                        <input type="password" class="mainframe-content__box" placeholder="Nhập mật khẩu">
+                        <input id="password" type="text" class="mainframe-content__box" placeholder="Nhập mật khẩu">
                     </label>
                     <label class="mainframe-content__line">
                         Nhập lại mật khẩu:
-                        <input type="password" class="mainframe-content__box" placeholder="Nhập lại mật khẩu">
+                        <input type="text" class="mainframe-content__box" placeholder="Nhập lại mật khẩu">
                     </label>
     
-                    <button class="mainframe-content__button mainframe-content__button-register">Đăng ký</button>  
+                    <button type="button" id="submitData" name="submitData" class="mainframe-content__button mainframe-content__button-register">Đăng ký</button>  
                     <div class="mainframe-content__extra mainframe-content__extra-center">
                         Bạn đã có tài khoản?
                         <a href="./login.html" class="mainframe-content__link">Đăng nhập</a>
@@ -191,6 +189,69 @@
             </div>
         </div>
     </footer>
+
+    <script type="module">
+ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.19.0/firebase-analytics.js";
+  import { getFirestore, setDoc, collection,doc } from 'https://www.gstatic.com/firebasejs/9.19.0/firebase-firestore.js'
+
+const firebaseConfig = {
+  apiKey: "AIzaSyC2D35IBjmTU4-00cN_1qld5Uw2nhZA1ok",
+  authDomain: "animehay-41fcf.firebaseapp.com",
+  databaseURL: "https://animehay-41fcf-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "animehay-41fcf",
+  storageBucket: "animehay-41fcf.appspot.com",
+  messagingSenderId: "909220367300",
+  appId: "1:909220367300:web:e8d405e683da33b8f0b291",
+  measurementId: "G-MHY40PWCXE"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+// Get a list of cities from your database
+
+window.saveUser = async (user) => {
+    const citiesRef = collection(db, "users");
+    await setDoc(doc(citiesRef, user.email), user);
+}
+
+window.login = async (email, password) => {
+    const docRef = doc(db, "users", email);
+    const docSnap = await getDoc(docRef);
+
+    if (docSnap.exists()) {
+        let user = docSnap.data()
+        return user.password === password
+    } else {
+        return false;
+    }
+}
+
+loginData.addEventListener('click', (e) => {
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+    login(email, password).then((resufalt) => {
+        if (resufalt)
+            console.log("login success")
+        else console.log("login failed");
+    }).catch((err) => {
+        console.log("login failed")
+    });;
+});
+
+submitData.addEventListener('click', (e) => {
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+    const user  = {id: "1", name: "bach", email,password}
+    try {
+        saveUser(user)
+        console.log("sucess");
+    } catch(e) {
+        console.log(e);
+    }
+});
+    </script>
     <script src="./script.js"></script>
 </body>
 </html>
