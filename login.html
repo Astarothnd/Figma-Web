@@ -105,13 +105,13 @@
                 <div class="mainframe-content p-6 m-10">
                     <h5 class="mainframe-content__header">Đăng nhập</h5>
                     
-                    <label class="mainframe-content__line">
+                    <label  class="mainframe-content__line">
                         Email:
-                        <input type="email" class="mainframe-content__box" placeholder="Nhập Email của bạn">
+                        <input id="email" type="email" class="mainframe-content__box" placeholder="Nhập Email của bạn">
                     </label>
                     <label class="mainframe-content__line">
                         Mật khẩu:
-                        <input type="password" class="mainframe-content__box" placeholder="Nhập mật khẩu">
+                        <input id="password" type="password" class="mainframe-content__box" placeholder="Nhập mật khẩu">
                     </label>
                     
                     <div class="mainframe-content__extra">
@@ -119,7 +119,7 @@
                         <a href="./register.html" class="mainframe-content__link">Đăng ký mới</a>
                     </div>
     
-                    <button class="mainframe-content__button">Đăng nhập</button>
+                    <button id="loginData" type="button" class="mainframe-content__button">Đăng nhập</button>
     
                     <div class="mainframe-content__bottom">
                         <button class="mainframe-content__box-button mainframe-content__button-facebook">
@@ -194,6 +194,43 @@
             </div>
         </div>
     </footer>
-    <script src="./script.js"></script>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.0/firebase-app.js";
+        import { getAuth, setPersistence, browserLocalPersistence, signInWithEmailAndPassword  } from 'https://www.gstatic.com/firebasejs/9.19.0/firebase-auth.js'
+       
+       const firebaseConfig = {
+         apiKey: "AIzaSyC2D35IBjmTU4-00cN_1qld5Uw2nhZA1ok",
+         authDomain: "animehay-41fcf.firebaseapp.com",
+         databaseURL: "https://animehay-41fcf-default-rtdb.asia-southeast1.firebasedatabase.app",
+         projectId: "animehay-41fcf",
+         storageBucket: "animehay-41fcf.appspot.com",
+         messagingSenderId: "909220367300",
+         appId: "1:909220367300:web:e8d405e683da33b8f0b291",
+         measurementId: "G-MHY40PWCXE"
+       };
+       
+       // Initialize Firebase
+       const app = initializeApp(firebaseConfig);
+       const auth = getAuth(app)
+       const loginData = document.getElementById('loginData')
+       // Get a list of cities from your database
+       
+       
+       loginData.addEventListener('click', (e) => {
+           var email = document.getElementById('email').value;
+           var password = document.getElementById('password').value;
+           
+           signInWithEmailAndPassword(auth, email, password)
+           .then((userCredential) => {
+                const user = userCredential.user
+                setPersistence(auth, browserLocalPersistence)
+                window.location.href = "./index.html";
+           })
+           .catch((error) => {
+                alert(error.message)  
+           })
+       });
+    </script>
+    <script type = "module" src="./user.js"></script>
 </body>
 </html>

@@ -291,6 +291,76 @@ body{
 }
 
 
+/* ---------------------HEADER ACCOUNT--------------------- */
+
+.header-account{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 0 8px;
+    margin-left: 16px;
+    height: 30px;
+}
+
+.header-account:hover{
+    background-color: #ddd;
+    color: #000;
+}
+.header-account:hover .header-account__content{
+    display: flex;
+}
+
+.header-account:hover .header-account__header-link{
+    color: #000;
+}
+
+.header-account__header-link{
+    display: block;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 4px 8px;
+    box-sizing: border-box;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    padding: 4px 0;
+}
+.header-account__content{
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid white;
+    position: absolute;
+    top: 100%;
+    right: -2px;
+    display: none;
+    padding: 8px 12px;
+    flex-direction: column;
+}
+.header-account__link{
+    text-decoration: none;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    padding: 8px 0;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #ddd;
+}
+
+.header-account__link:hover{
+    background-color: #ddd;
+    color: #222;
+}
+
+.header-account__icon{
+    padding: 4px;
+    font-size: 1.8rem;
+}
+
 /* ---------------------VIP BUTTON--------------------- */
 
 .header-vip{
@@ -1366,12 +1436,15 @@ body{
 
 /* ----------------------/Film Info/---------------------*/
 
+.film-background-img {
+    width: 100%;
+    height: 100%;
+}
 .film-background{
-    background-image: url(./Images/6361776.webp);
-    background-size: 100% 100%;
     width: 100%;
     height: 400px;
 }
+
 .film-info{
     position: absolute;
     display: flex;
@@ -2291,7 +2364,7 @@ body{
  /* ---------------------MOBILE USE--------------------- */
 @media only screen and (max-width:46.1875rem) {
     html{
-        font-size: 45%;
+        font-size: 40%;
     }
 
     /* Header */
@@ -2700,6 +2773,35 @@ body{
     }
     .header-notify{
         width: 120px;
+    }
+
+    .header-account{
+        padding: 2px 4px;
+        height: 25px;
+    }
+    .mostview-item__panel{
+        height: 40px;
+    }
+    .mostview-item__name{
+        font-size: 1.4rem;
+        padding: 0;
+        padding-top: 4px;
+    }
+    .mostview-item__rank{
+        width: 25px;
+    }
+    .header-account__header-link{
+        font-size: 1.2rem;
+    }
+    .header-account__content{
+        width: 150px;
+    }
+    .header-account__link{
+        font-size: 1.6rem;
+        padding: 4px 0;
+    }
+    .header-account__icon{
+        font-size: 2.2rem;
     }
     .m-10{
         flex: 0 0 100%;
