@@ -118,8 +118,9 @@
                     </label>
                     <label class="mainframe-content__line">
                         Nhập lại mật khẩu:
-                        <input type="password" class="mainframe-content__box" placeholder="Nhập lại mật khẩu">
+                        <input id = "repassword" type="password" class="mainframe-content__box" placeholder="Nhập lại mật khẩu">
                     </label>
+                    <p class="error-text">Lỗi cmnr em</p>
     
                     <button type="button" id="submitData" name="submitData" class="mainframe-content__button mainframe-content__button-register">Đăng ký</button>  
                     <div class="mainframe-content__extra mainframe-content__extra-center">
@@ -208,12 +209,36 @@
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const submitData = document.getElementById('submitData')
+        const errorText = document.querySelector('.error-text')
         
         submitData.addEventListener('click', (e) => {
             var email = document.getElementById('email').value;
             var password = document.getElementById('password').value;
             var username = document.getElementById('username').value;
+            var repassword = document.getElementById('repassword').value
+            errorText.style.display = 'none'
 
+            if (email == ''){
+                errorText.style.display = 'block'
+                errorText.innerHTML = "* Vui lòng nhập email *"
+                return
+            }else if(username == ''){
+                errorText.style.display = 'block'
+                errorText.innerHTML = "* Vui lòng nhập tên người dùng *"
+                return
+            }else if(password == ''){
+                errorText.style.display = 'block'
+                errorText.innerHTML = "* Vui lòng nhập mật khẩu *"
+                return
+            }else if(repassword == ''){
+                errorText.style.display = 'block'
+                errorText.innerHTML = "* Vui lòng nhập mật khẩu thứ 2 *"
+                return
+            }else if(password != repassword){
+                errorText.style.display = 'block'
+                errorText.innerHTML = "* Bạn đã nhập vào 2 mật khẩu khác nhau *"
+                return
+            }
             const auth = getAuth();
             createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
@@ -227,7 +252,8 @@
                 window.location.href = "./index.html";
             })
             .catch((error) => {
-                alert(error.message)
+                errorText.style.display = 'block'
+                errorText.innerHTML = "*"+ error.code + error.message + "*"
             });
     });
     </script>

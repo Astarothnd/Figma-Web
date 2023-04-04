@@ -118,16 +118,16 @@
                         <a href="#" class="mainframe-content__link">Quên mật khẩu</a>
                         <a href="./register.html" class="mainframe-content__link">Đăng ký mới</a>
                     </div>
-    
+                    <p class="error-text">Lỗi cmnr em</p>
                     <button id="loginData" type="button" class="mainframe-content__button">Đăng nhập</button>
     
                     <div class="mainframe-content__bottom">
                         <button class="mainframe-content__box-button mainframe-content__button-facebook">
-                            <i class="ti-google mainframe-content__icon"></i>
+                            <i class="ti-facebook mainframe-content__icon"></i>
                             <p class="mainframe-content__text">Đăng nhập bằng Facebook</p> 
                         </button>
                         <button class="mainframe-content__box-button mainframe-content__button-google">
-                            <i class="ti-facebook mainframe-content__icon"></i>
+                            <i class="ti-google mainframe-content__icon"></i>
                             <p class="mainframe-content__text">Đăng nhập bằng Google</p> 
                         </button>
                     </div>             
@@ -212,14 +212,25 @@
        // Initialize Firebase
        const app = initializeApp(firebaseConfig);
        const auth = getAuth(app)
+
+       const errorText = document.querySelector('.error-text')
        const loginData = document.getElementById('loginData')
        // Get a list of cities from your database
-       
        
        loginData.addEventListener('click', (e) => {
            var email = document.getElementById('email').value;
            var password = document.getElementById('password').value;
+           errorText.style.display = 'none'
            
+           if (email == ''){
+                errorText.style.display = 'block'
+                errorText.innerHTML = "* Vui lòng nhập email *"
+                return
+            }else if(password == ''){
+                errorText.style.display = 'block'
+                errorText.innerHTML = "* Vui lòng nhập mật khẩu *"
+                return
+            }
            signInWithEmailAndPassword(auth, email, password)
            .then((userCredential) => {
                 const user = userCredential.user
@@ -227,7 +238,8 @@
                 window.location.href = "./index.html";
            })
            .catch((error) => {
-                alert(error.message)  
+                errorText.style.display = 'block'
+                errorText.innerHTML = "*"+ error.code + error.message + "*"
            })
        });
     </script>

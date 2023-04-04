@@ -891,7 +891,6 @@ body{
 .mostview-item__name{
     font-size: 1.6rem;
     font-weight: 500;
-    height: 25px;
     padding: 6px 0;
 }
 .mostview-item__episode{
@@ -1504,7 +1503,7 @@ body{
     padding: 8px 16px;
     color: #ddd;
     text-decoration: none;
-    border-radius: 16px;
+    border-radius: 8px;
 }
 
 .film-info__item:hover{
@@ -1995,6 +1994,19 @@ body{
     justify-content: space-between;
     align-items: start;
 }
+.error-text{
+    margin-top: 12px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    display: none;
+    width: 100%;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442;
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
 .mainframe-content__box{
     margin-top: 8px;
     outline: none;
@@ -2374,11 +2386,11 @@ body{
     /* Header */
 
     .header{
-        height: 40px;
+        height: 50px;
     }
 
     .header-img{
-        height: 20px;
+        height: 25px;
     }
     .header-list + .header-list{
         flex: 0;
@@ -2394,7 +2406,7 @@ body{
         flex: 0;
     }
     .header-search{
-        padding-left:32px;
+        padding-left:0px;
     }
     .header-search__textbox{
         display: none;
@@ -2404,8 +2416,8 @@ body{
         border-radius: 50%;
         font-size: 1.6rem;
         border: 2px solid white;
-        width: 25px;
-        height: 25px;
+        width: 30px;
+        height: 30px;
     }
 
     .header-vip__link{
@@ -2416,8 +2428,8 @@ body{
 
     .header-login__link, .header-login{
         font-size: 1.6rem;
-        height: 25px;
-        width: 25px;
+        height: 30px;
+        width: 30px;
     }
 
     /* ImageNav */
@@ -2451,7 +2463,7 @@ body{
         width: 400%;
     }
     .vip-panel__img{
-        height: 50px;
+        height: 40px;
         object-fit: cover;
     }
     .new-section__item{
@@ -2527,6 +2539,15 @@ body{
         font-size: 1.8rem;
     }
 
+    /* CONTENT SECTION */
+
+    .content-section__item-text,
+    .content-section__item-date{
+        font-size: 1.4rem;
+    }
+    .content-section__item-del{
+        font-size: 1.6rem;
+    }
     /* footer */
 
     .footer-media__link{
@@ -2661,10 +2682,11 @@ body{
         margin: 4px 0;
     }
     .film-info__item{
-        padding: 2px 4px;
-        margin: 0 4px;
+        padding: 0 2px;
+        margin: 0 2px;
         font-size: .8rem;
         font-weight: 500;
+        border-radius: 4px;
     }
     .film-info__label{
         font-size: 1rem;
@@ -2674,7 +2696,9 @@ body{
         margin-top: 4px;
         height: auto;
     }
-
+    .film-info__line:nth-child(4){
+        display: none;
+    }
     .film-info__text{
         font-size: 1.2rem;
         font-weight: 500;
@@ -2712,13 +2736,13 @@ body{
         display: flex;
     }
     .film-episode__item{
-        padding: 2px;
+        padding: 1px;
     }
     
     .film-episode__link{
         font-size: 1.8rem;
         border-radius: 2px;
-        padding: 12px;
+        padding: 8px;
     }
 
     .film-line__panel{
@@ -2733,6 +2757,7 @@ body{
 
     .film-desc{
         font-size: 1.2rem;
+        line-height: 1.4rem;
     }
 
     /* LOGIN FORM */
@@ -2782,15 +2807,15 @@ body{
 
     .header-account{
         padding: 2px 4px;
-        height: 25px;
+        height: 30px;
     }
     .mostview-item__panel{
         height: 40px;
     }
     .mostview-item__name{
         font-size: 1.4rem;
-        padding: 0;
         padding-top: 4px;
+        padding-bottom: 0;
     }
     .mostview-item__rank{
         width: 25px;
