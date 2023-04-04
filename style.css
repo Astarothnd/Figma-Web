@@ -1876,7 +1876,7 @@ body{
     margin-top: 20px;
     display: flex;
     justify-content: center;
-    flex-direction: row-reverse;
+    align-items:center;
 }
 .film-content__server{
     background-color: #6b6a6a;
@@ -2390,7 +2390,7 @@ body{
     }
 
     .header-img{
-        height: 25px;
+        height: 30px;
     }
     .header-list + .header-list{
         flex: 0;
@@ -2544,6 +2544,9 @@ body{
     .content-section__item-text,
     .content-section__item-date{
         font-size: 1.4rem;
+    }
+    .content-section__item-date{
+        bottom: 35%;
     }
     .content-section__item-del{
         font-size: 1.6rem;
