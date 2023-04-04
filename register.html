@@ -194,6 +194,7 @@
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.0/firebase-app.js";
         import { getAuth, setPersistence, browserLocalPersistence, createUserWithEmailAndPassword, updateProfile } from 'https://www.gstatic.com/firebasejs/9.19.0/firebase-auth.js'
+        import { getFirestore, setDoc, collection,doc } from "https://www.gstatic.com/firebasejs/9.19.0/firebase-firestore.js";
 
         const firebaseConfig = {
         apiKey: "AIzaSyC2D35IBjmTU4-00cN_1qld5Uw2nhZA1ok",
@@ -208,9 +209,17 @@
 
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const auth = getAuth(app);
+
         const submitData = document.getElementById('submitData')
         const errorText = document.querySelector('.error-text')
         
+        window.saveUser = async (userInfo) => {
+            await setDoc(doc(db,"users", userInfo.email), userInfo);
+            window.location.href = "./index.html";
+        }
+
         submitData.addEventListener('click', (e) => {
             var email = document.getElementById('email').value;
             var password = document.getElementById('password').value;
@@ -239,17 +248,18 @@
                 errorText.innerHTML = "* Bạn đã nhập vào 2 mật khẩu khác nhau *"
                 return
             }
-            const auth = getAuth();
+
             createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                // Signed in 
-                const user = userCredential.user;
                 console.log("created account successfully")
+
+                const user = userCredential.user;
+                const userInfo = {email: email, password:password, displayName: username}
+                console.log(userInfo)
 
                 setPersistence(auth, browserLocalPersistence)
                 updateProfile(user, {displayName: username})
-
-                window.location.href = "./index.html";
+                saveUser(userInfo)
             })
             .catch((error) => {
                 errorText.style.display = 'block'
@@ -257,6 +267,5 @@
             });
     });
     </script>
-    <script type = "module" src="./user.js"></script>
 </body>
 </html>
