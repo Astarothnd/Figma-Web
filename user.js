@@ -24,19 +24,16 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth(app);
 
-window.setData = async (email) => {
+window.setData = async (userId) => {
   account_name.innerHTML = "--loading--" + ' <i class="ti-angle-down"></i>'
-  const docRef = doc(db, "users", email);
+  const docRef = doc(db, "users", userId);
   const docSnap = await getDoc(docRef);
 
-  if (docSnap.exists()) {
+  
     const data = docSnap.data()
+    console.log(data)
     const displayName = data.displayName;
     account_name.innerHTML = displayName + ' <i class="ti-angle-down"></i>'
-
-  } else {
-    account_name.innerHTML = "unknown" + ' <i class="ti-angle-down"></i>'
-  }
 }
 onAuthStateChanged(auth, (user) => {
   if (user) {
@@ -44,7 +41,8 @@ onAuthStateChanged(auth, (user) => {
     header_vip.style.display = 'none'
     header_account.style.display = 'flex'
 
-    setData(user.email)
+    console.log(user.uid)
+    setData(user.uid)
   } 
   else{
     header_login.style.display = 'flex'

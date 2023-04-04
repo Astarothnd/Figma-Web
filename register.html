@@ -215,8 +215,8 @@
         const submitData = document.getElementById('submitData')
         const errorText = document.querySelector('.error-text')
         
-        window.saveUser = async (userInfo) => {
-            await setDoc(doc(db,"users", userInfo.email), userInfo);
+        window.saveUser = async (userInfo, userId) => {
+            await setDoc(doc(db,"users", userId), userInfo);
             window.location.href = "./index.html";
         }
 
@@ -254,12 +254,13 @@
                 console.log("created account successfully")
 
                 const user = userCredential.user;
+                const userId = user.uid
                 const userInfo = {email: email, password:password, displayName: username}
-                console.log(userInfo)
+                console.log(userInfo, userId)
 
                 setPersistence(auth, browserLocalPersistence)
                 updateProfile(user, {displayName: username})
-                saveUser(userInfo)
+                saveUser(userInfo, userId)
             })
             .catch((error) => {
                 errorText.style.display = 'block'
